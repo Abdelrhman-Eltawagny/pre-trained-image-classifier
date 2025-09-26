@@ -3,105 +3,90 @@ Command Line Arguments:
     arch = alexnet 
  dogfile = dognames.txt
 
-10 filenames from folder pet_images
-Filename =  Pen_01.jpg     label =  pen
-
- 1 file:                Pen_01.jpg
-Filename =  Dog_01.jpg     label =  dog
-
- 2 file:                Dog_01.jpg
-Filename =  Dog_02.jpg     label =  dog
-
- 3 file:                Dog_02.jpg
-Filename =  cat_01.jpg     label =  cat
-
- 4 file:                cat_01.jpg
-
-Empty dictionary has 0 items
-
-Printing all key-value pairs in dictionary results_dic:
-
-filename =  Pen_01.jpg     pet label =  pen
-
-filename =  Dog_01.jpg     pet label =  dog
-
-filename =  Dog_02.jpg     pet label =  dog
-
-filename =  cat_01.jpg     pet label =  cat
-
-Empty dictionary has 4 items
-
 Pet Image Label Dictionary has 4 key-value pairs.
 Below are 4 of them:
- 1 key:                     Pen_01.jpg  label:                        pen
- 2 key:                     Dog_01.jpg  label:                        dog
- 3 key:                     Dog_02.jpg  label:                        dog
- 4 key:                     cat_01.jpg  label:                        cat
+ 1 key:                    Dog_02.jpeg  label:                        dog
+ 2 key:                  Bucket_01.jpg  label:                     bucket
+ 3 key:                     Cat_01.jpg  label:                        cat
+ 4 key:                    Dog_01.jpeg  label:                        dog
+
+Filename= Dog_02.jpeg
+Pet Label= dog
+Classifier Label= french bulldog
+Match= 1
+
+Filename= Bucket_01.jpg
+Pet Label= bucket
+Classifier Label= carton
+Match= 0
+
+Filename= Cat_01.jpg
+Pet Label= cat
+Classifier Label= egyptian cat, cat
+Match= 1
+
+Filename= Dog_01.jpeg
+Pet Label= dog
+Classifier Label= french bulldog
+Match= 1
 
      MATCH:
 
+                   Dog_02.jpeg: 
+Real:                        dog   Classifier:                 french bulldog
+
+                    Cat_01.jpg: 
+Real:                        cat   Classifier:              egyptian cat, cat
+
+                   Dog_01.jpeg: 
+Real:                        dog   Classifier:                 french bulldog
+
  NOT A MATCH:
 
-                    Pen_01.jpg: 
-Real:                        pen   Classifier:                         hammer
+                 Bucket_01.jpg: 
+Real:                     bucket   Classifier:                         carton
 
-                    Dog_01.jpg: 
-Real:                        dog   Classifier:                         beagle
-
-                    Dog_02.jpg: 
-Real:                        dog   Classifier:                         beagle
-
-                    cat_01.jpg: 
-Real:                        cat   Classifier: african hunting dog, hyena dog, cape hunting dog, lycaon pictus
-
-# Total Images 4 # Matches: 0 # NOT Matches: 4
+# Total Images 4 # Matches: 3 # NOT Matches: 1
 
      MATCH:
 
+                   Dog_02.jpeg: 
+Real:                        dog   Classifier:                 french bulldog  
+PetLabelDog: 1  ClassLabelDog: 1
+
+                    Cat_01.jpg: 
+Real:                        cat   Classifier:              egyptian cat, cat  
+PetLabelDog: 0  ClassLabelDog: 0
+
+                   Dog_01.jpeg: 
+Real:                        dog   Classifier:                 french bulldog  
+PetLabelDog: 1  ClassLabelDog: 1
+
  NOT A MATCH:
 
-                    Pen_01.jpg: 
-Real:                        pen   Classifier:                         hammer  
+                 Bucket_01.jpg: 
+Real:                     bucket   Classifier:                         carton  
 PetLabelDog: 0  ClassLabelDog: 0
 
-                    Dog_01.jpg: 
-Real:                        dog   Classifier:                         beagle  
-PetLabelDog: 1  ClassLabelDog: 1
-
-                    Dog_02.jpg: 
-Real:                        dog   Classifier:                         beagle  
-PetLabelDog: 1  ClassLabelDog: 1
-
-                    cat_01.jpg: 
-Real:                        cat   Classifier: african hunting dog, hyena dog, cape hunting dog, lycaon pictus  
-PetLabelDog: 0  ClassLabelDog: 0
-
-# Total Images 4 # Matches: 0 # NOT Matches: 4
+# Total Images 4 # Matches: 3 # NOT Matches: 1
 
  ** Statistics from calculates_results_stats() function:
 N Images:  4  N Dog Images:  2  N NotDog Images:  2 
-Pct Corr dog: 100.0 Pct Corr NOTdog: 100.0  Pct Corr Breed:   0.0
+Pct Corr dog: 100.0 Pct Corr NOTdog: 100.0  Pct Corr Breed: 100.0
 
  ** Check Statistics - calculated from this function as a check:
 N Images:  4  N Dog Images:  2  N NotDog Images:  2 
-Pct Corr dog: 100.0 Pct Corr NOTdog: 100.0  Pct Corr Breed:   0.0
+Pct Corr dog: 100.0 Pct Corr NOTdog: 100.0  Pct Corr Breed: 100.0
 
-Model used: alexnet
+*** Results Summary for Model: ALEXNET ***
+Number of Images:   4
+Number of Dog Images:   2
+Number of 'Not-a' Dog Images:   2
 
-Number of Images: 4 
-Number of Dog Images: 2 
-Number of "Not-a" Dog Images: 2
-pct_match: 0.0
-pct_correct_dogs: 100.0
-pct_correct_breed: 0.0
-pct_correct_notdogs: 100.0
-
-MISCLASSIFIED BREEDS: 
- Pet Image Label?: dog 
- Classifier Label?: beagle
-
-MISCLASSIFIED BREEDS: 
- Pet Image Label?: dog 
- Classifier Label?: beagle
+--- Performance Statistics ---
+pct_match           : 75.00%
+pct_correct_dogs    : 100.00%
+pct_correct_notdogs : 100.00%
+pct_correct_breed   : 100.00%
 
 ** Total Elapsed Runtime: 0:0:0

@@ -42,11 +42,11 @@ def get_pet_labels(image_dir):
     """
 
   # List items in directory
-  filename_list = listdir(image_dir)
+    filename_list = listdir(image_dir)
 
-  results_dic = {}
+    results_dic = {}
 
-  for filename in filename_list:
+    for filename in filename_list:
         # Skip hidden/system files like .DS_Store
       if filename[0] != ".":
           # Convert filename to lowercase and split by "_"
